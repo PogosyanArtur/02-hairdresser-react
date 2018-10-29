@@ -1,0 +1,18 @@
+@mixin reset-text(){
+  font-family: $ff-alfa;
+  // We deliberately do NOT reset font-size or word-wrap.
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.5;
+  text-align: left ;// Fallback for where `start` is not supported
+  text-align: start;// stylelint-disable-line declaration-block-no-duplicate-properties
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: normal;
+  word-break: normal;
+  word-spacing: normal;
+  white-space: normal;
+  line-break: auto;
+}
+

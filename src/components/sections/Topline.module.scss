@@ -1,0 +1,96 @@
+@import '../../styles/index.scss';
+
+.Block {
+	@include container(fluid);
+  background-color: $c-main;
+}
+
+.Container {
+		@include container();
+
+		&_active .TopLine-Box {
+			display: flex;
+		}
+
+		&_active .TopLine-Arrow {
+			transform: rotate(180deg);
+		}
+	}
+
+.Box {
+		@include row();
+		display: none;
+
+		@include up(md) {
+			display: flex;
+		}
+}
+
+.Contacts {
+		@include col(12);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		@include up(md) {
+			@include col(9);
+			justify-content: flex-start;
+			flex-direction: row;
+		}
+	}
+
+.Item_hovarable {
+		@include btn();
+		@include hover-focus() {
+			color: $c-main-9;
+		}
+	}
+
+.Item {
+		color: $c-white;
+		font-family: $ff-beta;
+		font-size: 13px;
+		letter-spacing: 1px;
+		white-space: nowrap;
+		display: flex;
+		align-items: center;
+		padding: 10px 7px;
+		transition: all 0.3s;
+
+		&_noGutter {
+			padding: 0;
+		}
+}
+
+.Icon {
+		@include size(23px);
+		margin-right: 10px;
+	}
+
+.ArrowBox {
+		text-align: center;
+		cursor: pointer;
+		@include py(9px);
+
+		@include up(md) {
+			display: none;
+		}
+	}
+
+.Arrow {
+		@include size(23px);
+		color: $c-white;
+	}
+
+.Socials {
+		@include col(12);
+		display: flex;
+		flex-diraction: row;
+		justify-content: center;
+
+		@include up(md) {
+			@include col(3);
+			justify-content: flex-end;
+		}
+	}
+
