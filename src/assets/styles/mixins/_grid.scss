@@ -16,7 +16,7 @@
 		box-sizing: border-box;
 
 		@each $key, $value in $container-max-widths {
-			@media (min-width: $grid-breakpoints[$key] ){
+			@media (min-width: #{map-get($grid-breakpoints, $key)}){
 				max-width: $value;
 			}			
 		}

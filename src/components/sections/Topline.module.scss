@@ -1,4 +1,4 @@
-@import '../../styles/index.scss';
+@import '../../assets/styles/index.scss';
 
 .Block {
 	@include container(fluid);
@@ -47,6 +47,7 @@
 	}
 
 .Item {
+		@include btn;
 		color: $c-white;
 		font-family: $ff-beta;
 		font-size: 13px;
