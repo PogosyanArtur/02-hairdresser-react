@@ -7,11 +7,26 @@ class Topline extends Component {
 	state = {
 		showContacts: false
 	}
-	togglehandler = (e) => {
+	toggleHandler = (e) => {
 		e.preventDefault();
 		const doesShowContacts = this.state.showContacts;
 		this.setState({showContacts : !doesShowContacts})
 	};
+	initViewContacts(){
+		let windowWidth = window.innerWidth
+		if (windowWidth > 992) {
+			this.setState({ showContacts: true });
+		}
+		else {
+			this.setState({ showContacts: false });
+		}
+	}
+	componentDidMount() {
+		window.addEventListener("resize", this.initViewContacts.bind(this))
+	}
+	componentWillUnmount() {		
+		window.removeEventListener("resize", this.initViewContacts.bind(this))
+	}
 	render(){
 		return(
 			<section className={styles.Block}>
@@ -31,8 +46,7 @@ class Topline extends Component {
 						</div>
 					</div> : null
 					}
-
-					<div className={styles.Arrow} onClick={this.togglehandler}>
+					<div className={styles.Arrow} onClick={this.toggleHandler}>
 						<Icon name="arrowDown" size="18" />
 					</div>			
 				</div> 
