@@ -10,6 +10,7 @@ const Icon = (props)=>{
             height={props.size || 24}
             fill={props.color || 'currentColor'}
             viewBox={props.viewBox || '0 0 24 24'}
+            style={{transform: `rotate(${props.rotate}deg)`} || null}
             aria-hidden="true"
         >
             {Icons[props.name]()}
