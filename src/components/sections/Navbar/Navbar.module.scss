@@ -1,0 +1,80 @@
+@import '../../../assets/styles/index.scss';
+
+.Box {
+	background-color: $c-white;
+  position: relative;
+  @include up(md){
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@include container()
+  }
+}
+.Container{
+  @include	container();
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	@include up(md){
+    max-width: 100%;
+    width: auto;
+    padding: 0;
+    margin: 0;
+  }
+}
+.Brand{
+  display: inline-block;
+}
+
+.BrandImage{
+  height: 100px;
+  max-width: 100%;
+}
+
+.Toggler{
+  @include btn();
+  background-color: $c-main;
+  padding: 10px;
+  border-radius: 5px;
+  @include up(md){
+    display: none;
+  }
+}
+
+.TogglerIcon{
+  @include size(25px);
+  color: $c-white;
+}
+
+.Nav {
+  transform-origin: top left;
+  z-index: 10;
+  @include up(md){
+    position: static;
+    text-align: right;
+  }
+}
+
+.Link{
+ @include btn();
+  display: block;
+  background-color: $c-black;
+  color: $c-white;
+  padding: 8px 30px;
+  transition: color 0.4s;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: $ff-gamma;
+  font-size: 14px;
+  letter-spacing: 1px;
+  @include hover-focus() {
+    color: $c-main;
+  }
+  @include up(md){
+    display: inline-block;
+    background-color: $c-white;
+    color: $c-gray-9;
+    padding: 30px 15px;
+  }
+}
+

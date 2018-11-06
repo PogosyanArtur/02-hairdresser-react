@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import classnames from 'classnames';
-import styles from './Topline.module.scss';
-import Icon from '../icon/icon'
+import styles from './TopLine.module.scss';
+import Icon from '../../icon/icon'
 
 class Topline extends Component {
 	state = {

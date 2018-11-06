@@ -1,9 +1,13 @@
 import React from 'react';
-import Topline from '../components/sections/topline'
+import TopLine from '../components/sections/TopLine/TopLine'
+import Navbar from '../components/sections/Navbar/Navbar'
 
 
 const Home = () => (
-  <Topline />
+  <>
+    <TopLine />
+    <Navbar />
+  </>
 )
 
 
