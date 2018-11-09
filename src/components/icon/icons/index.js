@@ -5,5 +5,6 @@ import facebook from './facebook'
 import vk from './vk'
 import ok from './ok'
 import arrowDown from './arrowDown'
+import menu from './menu'
 
-export {call, mail, clock,facebook,vk,ok,arrowDown}
+export { call, mail, clock, facebook, vk, ok, arrowDown, menu}

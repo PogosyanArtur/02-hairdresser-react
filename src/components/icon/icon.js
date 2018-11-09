@@ -13,7 +13,7 @@ const Icon = (props)=>{
             style={{transform: `rotate(${props.rotate}deg)`} || null}
             aria-hidden="true"
         >
-            {Icons[props.name]()}
+            {Icons[props.name](props)}
 
         </svg>
     )

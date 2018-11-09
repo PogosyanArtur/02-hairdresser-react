@@ -23,7 +23,7 @@ class NavBar extends Component {
       <section className={styles.Box}>
         <div className={styles.Container}>
           <a className={styles.Brand} href="#s"><img className={styles.BrandImage} src={logoImage} alt="logo" /></a>
-          <button className={styles.Toggler} type="button"><Icon name="call" color="#fff" /></button>
+          <button className={styles.Toggler} type="button"><Icon name="menu" color="#red" /></button>
         </div>
         <div className={styles.Nav}>
           {lists}
