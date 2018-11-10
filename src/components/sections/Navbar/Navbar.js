@@ -14,16 +14,34 @@ class NavBar extends Component {
         { name: "цены", link: "#price" },
         { name: "акции", link: "#" },
         { name: "контакты", link: "#" }
-      ]
+      ],
+      listsIsVisible : true
      }
   }
+  menuToggleHandler = ()=>{
+    this.setState({listsIsVisible :!this.state.listsIsVisible})
+  }
+  initMenuLists = ()=>{
+    let windowWidth = window.innerWidth;
+    if(windowWidth > 992){
+      this.setState({listsIsVisible:true})
+    } else {
+      this.setState({listsIsVisible:false})
+    }
+  }
+  componentDidMount(){    
+    window.addEventListener('resize',()=>this.initMenuLists())
+  }
   render() {
-    const lists = this.state.lists.map(item => (<a className={styles.Link} href={item.link}>{item.name}</a>)) 
+    let lists = null
+    if(this.state.listsIsVisible){
+      lists = this.state.lists.map((item, index) => (<a className={styles.Link} key={index} href={item.link}>{item.name}</a>))
+    } 
     return ( 
       <section className={styles.Box}>
         <div className={styles.Container}>
           <a className={styles.Brand} href="#s"><img className={styles.BrandImage} src={logoImage} alt="logo" /></a>
-          <button className={styles.Toggler} type="button"><Icon name="menu" color="#red" /></button>
+          <button className={styles.Toggler} type="button" onClick={this.menuToggleHandler}><Icon name="menu" color="#fff" /></button>
         </div>
         <div className={styles.Nav}>
           {lists}
