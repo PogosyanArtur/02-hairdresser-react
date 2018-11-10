@@ -1,6 +1,8 @@
 @import '../../../assets/styles/index.scss';
 
-
+.Title{
+    @include container()
+}
 .Text {
     text-align: center;
     padding: 20px 0;

@@ -1,12 +1,10 @@
 import React from "react";
 import style from "./service.module.scss";
-import Title from "../../contents/title/title";
 import Card from "../../ui/card/card";
 
 export default () => {
  return (
       <section className={style.Box}>
-        <Title title="Наши услуги" />
         <div className={style.Content}>
           <Card
             cardClassName={style.Item}

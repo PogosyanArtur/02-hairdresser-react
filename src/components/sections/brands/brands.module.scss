@@ -1,0 +1,20 @@
+@import '../../../assets/styles/index.scss';
+
+.Box {
+	@include container();
+    display: block;
+    text-align: center;
+
+}
+.Brand{
+    @include btn();
+    cursor: pointer;
+    display: inline-block;
+    padding: 20px;
+    color: $c-main;
+    transition: color 0.3s;
+}
+.Brand:hover,
+.Brand:focus {
+    color: $c-black;
+}
