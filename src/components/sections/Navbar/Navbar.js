@@ -29,7 +29,8 @@ class NavBar extends Component {
       this.setState({listsIsVisible:false})
     }
   }
-  componentDidMount(){    
+  componentDidMount(){
+    this.setState({ listsIsVisible: false })
     window.addEventListener('resize',()=>this.initMenuLists())
   }
   render() {

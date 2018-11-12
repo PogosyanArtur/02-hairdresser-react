@@ -6,6 +6,7 @@ import Title from '../components/sections/title/title'
 import Poster from '../components/sections/poster/poster'
 import Brands from '../components/sections/brands/brands'
 import Prices from '../components/sections/Prices/Prices'
+import CreditCards from '../components/sections/creditCards/creditCards'
 
 
 const Home = () => (
@@ -19,6 +20,7 @@ const Home = () => (
     <Brands/>
     <Title title="Наши цены"/>
     <Prices/>
+    <CreditCards/>
   </>
 )
 export default Home
