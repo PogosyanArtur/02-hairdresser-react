@@ -1,10 +1,11 @@
-import React, {Component} from 'react'
+import React from 'react'
 import {ReactComponent as VisaCardIcon} from './svg/visa.svg'
 import {ReactComponent as MasterCardIcon} from './svg/mastercard.svg'
 import {ReactComponent as MirCardIcon} from './svg/mir.svg'
 import style from './creditCards.module.scss'
-export default class creditCards extends Component {
-    render() {
+
+
+export default () => {
         return (
             <div>
                 <div className={style.CreditCards}>
@@ -20,5 +21,4 @@ export default class creditCards extends Component {
                 </div>
             </div>
         )
-    }
 }
