@@ -27,12 +27,12 @@
         text-align: center;
         @include mx(5px);
     }
-    &:focus,
-    &:hover,
-    &_active{
-        border: 2px solid $c-main-8;
-        color: $c-main-8;
-    }
+}
+.Pill:focus,
+.Pill:hover,
+.Pill_active{
+    border: 2px solid $c-main-8;
+    color: $c-main-8;
 }
 		
 .Content,

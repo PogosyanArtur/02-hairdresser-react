@@ -344,8 +344,9 @@ export default class Prices extends Component {
   };
   debugger
   priceListHandler = (e) => {
-    let targetItem = e.target.getAttribute('data-filter')
-    this.setState({filterdList : targetItem})
+    let targetItem = e.target
+    let targetItemFilterData = targetItem.getAttribute('data-filter')
+    this.setState({filterdList : targetItemFilterData})
   }
   render() {
     const pills = this.state.lists.map( item => <button className={style.Pill} data-filter={item.filter} key={item.filter} type="button" onClick={this.priceListHandler}> {item.text}</button>)
