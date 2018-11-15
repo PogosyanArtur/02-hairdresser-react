@@ -23,6 +23,20 @@ const Home = () => (
     <Prices/>
     <CreditCards/>
     <Stocks/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
   </>
 )
 export default Home
