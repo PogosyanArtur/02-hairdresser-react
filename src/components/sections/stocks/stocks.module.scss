@@ -1,25 +1,24 @@
 @import '../../../assets/styles/index.scss';
 
-.Box{
-  background-color: $c-main;
-  padding-top: 30px ;
-  padding-bottom: 70px ;
+.Box {
+	background-color: $c-main;
+	padding-top: 30px;
+	padding-bottom: 100px;
 }
-.Container{
- @include container();
+.Container {
+	@include container();
 }
 
-.Title{
-  color: $c-white;
-  font-size: 28px;
-  font-family: $ff-beta;
-  letter-spacing: 1px;
-  padding-bottom: 20px;
-  margin: 0
+.Title {
+	color: $c-white;
+	font-size: 28px;
+	font-family: $ff-beta;
+	letter-spacing: 1px;
+	padding-bottom: 20px;
+	margin: 0;
 }
-.SlideImage{
-  max-width: 100%;
+.SlideImage {
+	max-width: 100%;
 }
-.ImageBox{
-
+.ImageBox {
 }
