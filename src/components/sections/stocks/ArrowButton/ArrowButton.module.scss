@@ -7,4 +7,16 @@
 	border-radius: 5px;
 	color: #fff;
 	cursor: pointer;
+	position: absolute;
+	bottom: -70px;
+	transform: (translateX(-50%));
+	z-index: 1000;
+	margin: 5px;
+}
+
+.Arrow.Left {
+	right: 50%;
+}
+.Arrow.Right {
+	left: 50%;
 }

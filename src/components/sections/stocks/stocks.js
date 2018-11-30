@@ -15,10 +15,18 @@ export default class stocks extends Component {
 			lazyLoad: true,
 			slidesToScroll: 1,
 			nextArrow: (
-				<ArrowButton ArrowButtonRotate="90" ArrowButtonStyle={{ marginLeft: '-5px' }} />
+				<ArrowButton
+					ArrowButtonRotate="90"
+					ArrowButtonStyle={{ marginLeft: '-5px' }}
+					left
+				/>
 			),
 			prevArrow: (
-				<ArrowButton ArrowButtonRotate="-90" ArrowButtonStyle={{ marginRight: '-5px' }} />
+				<ArrowButton
+					ArrowButtonRotate="-90"
+					ArrowButtonStyle={{ marginRight: '-5px' }}
+					right
+				/>
 			),
 			responsive: [
 				{
