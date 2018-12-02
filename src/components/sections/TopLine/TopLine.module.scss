@@ -2,94 +2,63 @@
 
 .Block {
 	@include container(fluid);
-  	background-color: $c-main;
+	background-color: $c-main;
 }
 
 .Container {
-		@include container();
+	@include container();
 
-		&_active .TopLine-Box {
-			display: flex;
-		}
-
-		&_active .TopLine-Arrow {
-			transform: rotate(180deg);
-		}
+	&_active .TopLine-Box {
+		display: flex;
 	}
 
-.Box {
-		// @include row();
-		// display: none;
-
-		@include up(lg) {
-			display: flex;
-		}
+	&_active .TopLine-Arrow {
+		transform: rotate(180deg);
+	}
 }
 
 .Contacts {
-		@include col(12);
+	@include up(lg) {
 		display: flex;
-		flex-direction: column;
-		align-items: center;
-
-		@include up(lg) {
-			@include col(9);
-			justify-content: flex-start;
-			flex-direction: row;
-		}
 	}
-
-.Item_hovarable {
-		@include btn();
-		@include hover-focus() {
-			color: $c-main-9;
-		}
-	}
-
-.Item {
-		text-decoration: none;
-		color: $c-white;
-		font-family: $ff-beta;
-		font-size: 13px;
-		letter-spacing: 1px;
-		white-space: nowrap;
-		display: flex;
-		align-items: center;
-		padding: 10px 7px;
-		transition: all 0.3s;
-		transform: rotate()
-
-		&_noGutter {
-			padding: 0;
-		}
 }
 
-.ItemIcon {
-		@include size(23px);
-		margin-right: 10px;
+.ContactsBlock {
+	@include col(12);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	@include up(lg) {
+		@include col(9);
+		justify-content: flex-start;
+		flex-direction: row;
 	}
+}
+
+.SocialsBlock {
+	@include col(12);
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+
+	@include up(lg) {
+		@include col(3);
+		justify-content: flex-end;
+	}
+}
+
 
 .Arrow {
-		text-align: center;
-		cursor: pointer;
-		color: $c-white;
+	text-align: center;
+	cursor: pointer;
+	color: $c-white;
 
-		@include py(10px);
+	padding-top: 10px;
+	padding-bottom: 10px;
 
-		@include up(lg) {
-			display: none;
-		}
+	@include up(lg) {
+		display: none;
 	}
-
-.Socials {
-		@include col(12);
-		display: flex;
-		flex-diraction: row;
-		justify-content: center;
-
-		@include up(lg) {
-			@include col(3);
-			justify-content: flex-end;
-		}
-	}
+}
 

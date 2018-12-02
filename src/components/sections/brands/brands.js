@@ -1,5 +1,5 @@
 import React from 'react'
-import style from './brands.module.scss'
+import style from './Brands.module.scss'
 import { ReactComponent as Estel } from './svg/estel.svg'
 import { ReactComponent as Indola } from './svg/indols.svg'
 import { ReactComponent as Refectocil } from './svg/refectocil.svg'

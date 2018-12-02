@@ -1,5 +1,5 @@
 import React from 'react'
-import style from './poster.module.scss'
+import style from './Poster.module.scss'
 
 export default (params) => {
     return (

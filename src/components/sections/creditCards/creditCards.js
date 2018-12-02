@@ -2,7 +2,7 @@ import React from 'react'
 import {ReactComponent as VisaCardIcon} from './svg/visa.svg'
 import {ReactComponent as MasterCardIcon} from './svg/mastercard.svg'
 import {ReactComponent as MirCardIcon} from './svg/mir.svg'
-import style from './creditCards.module.scss'
+import style from './CreditCards.module.scss'
 
 
 export default () => {

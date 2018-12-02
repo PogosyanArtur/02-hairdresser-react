@@ -1,13 +1,14 @@
 import React from 'react';
 import TopLine from '../components/sections/TopLine/TopLine'
 import Navbar from '../components/sections/Navbar/Navbar'
-import Service from '../components/sections/service/service'
-import Title from '../components/sections/title/title'
-import Poster from '../components/sections/poster/poster'
-import Brands from '../components/sections/brands/brands'
+import Service from '../components/sections/Service/Service'
+import Title from '../components/sections/Title/Title'
+import Poster from '../components/sections/Poster/Poster'
+import Brands from '../components/sections/Brands/Brands'
 import Prices from '../components/sections/Prices/Prices'
-import CreditCards from '../components/sections/creditCards/creditCards'
-import Stocks from '../components/sections/stocks/stocks'
+import CreditCards from '../components/sections/CreditCards/CreditCards'
+import Stocks from '../components/sections/Stocks/Stocks';
+import Map from '../components/sections/Map/Map'
 
 
 const Home = () => (
@@ -23,20 +24,7 @@ const Home = () => (
     <Prices/>
     <CreditCards/>
     <Stocks/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
+    <Map/>
   </>
 )
 export default Home

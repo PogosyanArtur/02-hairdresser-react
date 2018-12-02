@@ -7,26 +7,27 @@ class NavBar extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			listsIsVisible: true
+			listsIsVisible: null
 		};
 	}
 	menuToggleHandler = () => {
-		this.setState({ listsIsVisible: !this.state.listsIsVisible });
+		this.setState((prevState) => ({ listsIsVisible: !prevState.listsIsVisible }));
 	};
-	initMenuLists = () => {
+	resizeHandler = () => {
 		let windowWidth = window.innerWidth;
-		if (windowWidth > 992) {
+		if (windowWidth >= 992) {
 			this.setState({ listsIsVisible: true });
 		} else {
 			this.setState({ listsIsVisible: false });
 		}
 	};
 	componentDidMount() {
-		if (window.innerWidth < 992) {
-			this.setState({ listsIsVisible: false });
-		}
-		window.addEventListener('resize', () => this.initMenuLists());
+		this.resizeHandler()
+		document.addEventListener('resize', () => this.resizeHandler);
 	}
+	// componentWillUnmount(){
+	// 	window.removeEventListener('resize', () => this.resizeHandler);
+	// }
 	render() {
 		let navbarLists = [
 			{ name: 'главная', link: '#' },

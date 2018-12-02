@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import style from './stocks.module.scss';
+import style from './Stocks.module.scss';
 import Slider from 'react-slick';
 import ArrowButton from './ArrowButton/ArrowButton';
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import style from './title.module.scss'
+import style from './Title.module.scss'
 export default (params) => {
     return (
         <div className={style.Title} >

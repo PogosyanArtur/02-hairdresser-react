@@ -1,0 +1,20 @@
+@import '../../../../assets/styles/index.scss';
+
+.Item
+{
+	text-decoration: none;
+	color: $c-white;
+	font-family: $ff-beta;
+	font-size: 13px;
+	letter-spacing: 1px;
+	white-space: nowrap;
+	display: flex;
+	align-items: center;
+	padding: 10px 7px;
+	transition: all 0.3s;
+}
+
+a.Item:hover,	
+a.Item:focus{
+    color: $c-main-9;
+}
