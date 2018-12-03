@@ -1,33 +1,32 @@
 @import '../../../assets/styles/index.scss';
-.Box{
+.Box {
 	@include container(fluid);
 	position: relative;
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
 }
-.Image{
+.Image {
 	height: 100%;
 }
-.Title{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: $c-white;
-    font-family: $ff-alpha;
-    font-weight: normal;
-    font-size: 16px;
-    letter-spacing: 1px;
-    text-align: center;
-    text-transform: uppercase;
-    margin: 0;
-    padding: 0;
-    @include up(md){
-        font-size: 18px;
-    }
-    @include up(lg){
-        font-size: 22px;
-    }
-
+.Title {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: $c-white;
+	font-family: $ff-alpha;
+	font-weight: normal;
+	font-size: 14px;
+	letter-spacing: 1px;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 0;
+	@include up(md) {
+		font-size: 18px;
+	}
+	@include up(lg) {
+		font-size: 22px;
+	}
 }

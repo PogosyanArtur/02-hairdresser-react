@@ -18,14 +18,14 @@ export default class stocks extends Component {
 				<ArrowButton
 					ArrowButtonRotate="90"
 					ArrowButtonStyle={{ marginLeft: '-5px' }}
-					left
+					right
 				/>
 			),
 			prevArrow: (
 				<ArrowButton
 					ArrowButtonRotate="-90"
 					ArrowButtonStyle={{ marginRight: '-5px' }}
-					right
+					left
 				/>
 			),
 			responsive: [
