@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./Service.module.scss";
-import Card from "../../ui/card/card";
+import Card from "../../ui/Card/Card";
 import lists from "./ServiceData"
 
 export default () => {

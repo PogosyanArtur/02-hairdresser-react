@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import Transition from 'react-transition-group/Transition';
+import AnimateHeight from 'react-animate-height';
+import MediaQuery from 'react-responsive';
+
 import SocialsInfo from '../../ui/Contacts/SocialsInfo/SocialsInfo';
 import ContactsInfo from '../../ui/Contacts/ContactsInfo/ContactsInfo';
 
@@ -8,76 +10,53 @@ import Icon from '../../icon/icon';
 
 class Topline extends Component {
 	state = {
-		showContacts: true,
-		contactsDefaultHeight:null,
-		contactsHeight: 0
+		showContacts: 0
 	};
 
 	toggleHandler = () => {
-		this.setState((prevState) => ({ showContacts: !prevState.showContacts }));
+		this.setState(prevState => ({ showContacts: prevState.showContacts === 0 ? 'auto' : 0 }));
 	};
 
-	initViewContacts() {
-		if (window.innerWidth < 992) {
-
-			this.setState((prevState) => ({
-				showContacts: false,
-				contactsHeight: prevState.contactsDefaultHeight
-			}));
-		}
-		if (window.innerWidth >= 992) {
-			this.setState({ showContacts: true, contactsHeight: 'auto' });
-		}
-	}
-	componentDidMount() {
-		this.initViewContacts();
-		window.addEventListener('resize', this.initViewContacts.bind(this));
-		const contactsDefaultHeight = document.getElementById('TopLineContacts').clientHeight;
-		this.setState({contactsDefaultHeight})
-	}
-
-	componentWillUnmount() {
-		window.removeEventListener('resize', this.initViewContacts.bind(this));
-	}
-
 	render() {
-		const duration = 200;
-		const contactsDefaultStyles = {
-			height: this.state.contactsHeight,
-			transition: `all ${duration}ms ease-in`,
-			overflow: 'hidden'
-		};
-		const transitionStyles = {
-			entered: { height: this.state.contactsDefaultHeight },
-			exited: { height: 0 }
-		};
 		return (
 			<section className={classes.Block}>
 				<div className={classes.Container}>
-					<Transition in={this.state.showContacts} mountOnEnter timeout={duration}>
-						{(state) => (
-							<div
-								id="TopLineContacts"
-								className={classes.Contacts}
-								style={{
-									...contactsDefaultStyles,
-									...transitionStyles[state]
-								}}
-							>
+					<MediaQuery query="(max-width: 991px)">
+						<AnimateHeight duration={500} height={this.state.showContacts}>
+							<div id="TopLineContacts">
 								<ContactsInfo
 									contactsInfoClassName={classes.ContactsBlock}
-									names={[ 'time', 'mail', 'tel' ]}
+									names={['time', 'mail', 'tel']}
 								/>
 								<SocialsInfo
 									socialInfoClassName={classes.SocialsBlock}
 									view="light"
 								/>
 							</div>
-						)}
-					</Transition>
-					<div className={classes.Arrow} onClick={this.toggleHandler}>
-						<Icon name="arrow" size="10" />
-					</div>
+						</AnimateHeight>
+						<div className={classes.Arrow} onClick={this.toggleHandler}>
+							{console.log(this.state.showContacts)}
+							<Icon name="arrow" size="10" />
+						</div>
+					</MediaQuery>
+					<MediaQuery query="(min-width: 992px)">
+						<div id="TopLineContacts" className={classes.Contacts}>
+							<ContactsInfo
+								contactsInfoClassName={[
+									classes.ContactsBlock,
+									classes.ContactsBlock_screen_lg
+								].join(' ')}
+								names={['time', 'mail', 'tel']}
+							/>
+							<SocialsInfo
+								socialInfoClassName={[
+									classes.SocialsBlock,
+									classes.SocialsBlock_screen_lg
+								].join(' ')}
+								view="light"
+							/>
+						</div>
+					</MediaQuery>
 				</div>
 			</section>
 		);

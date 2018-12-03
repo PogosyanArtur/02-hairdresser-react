@@ -18,9 +18,7 @@
 }
 
 .Contacts {
-	@include up(lg) {
-		display: flex;
-	}
+	display: flex;
 }
 
 .ContactsBlock {
@@ -28,12 +26,12 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+}
 
-	@include up(lg) {
-		@include col(9);
-		justify-content: flex-start;
-		flex-direction: row;
-	}
+.ContactsBlock_screen_lg {
+	@include col(9);
+	justify-content: flex-start;
+	flex-direction: row;
 }
 
 .SocialsBlock {
@@ -41,24 +39,17 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-
-	@include up(lg) {
-		@include col(3);
-		justify-content: flex-end;
-	}
 }
 
+.SocialsBlock_screen_lg {
+	@include col(3);
+	justify-content: flex-end;
+}
 
 .Arrow {
 	text-align: center;
 	cursor: pointer;
 	color: $c-white;
-
 	padding-top: 10px;
 	padding-bottom: 10px;
-
-	@include up(lg) {
-		display: none;
-	}
 }
-
