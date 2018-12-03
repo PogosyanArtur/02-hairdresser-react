@@ -2,79 +2,75 @@
 
 .Box {
 	background-color: $c-white;
-  position: relative;
-  @include up(lg){
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		@include container()
-  }
+	position: relative;
 }
-.Container{
-  @include	container();
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	@include up(lg){
-    max-width: 100%;
-    width: auto;
-    padding: 0;
-    margin: 0;
-  }
+.Box_screen_lg {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	@include container();
 }
-.Brand{
-  display: inline-block;
+.Container {
+	@include container();
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
-
-.BrandImage{
-  height: 100px;
-  max-width: 100%;
+.Container_screen_lg {
+	max-width: 100%;
+	width: auto;
+	padding: 0;
+	margin: 0;
+}
+.Brand {
+	display: inline-block;
 }
 
-.Toggler{
-  @include btn();
-  background-color: $c-main;
-  padding: 10px;
-  border-radius: 5px;
-  @include up(lg){
-    display: none;
-  }
+.BrandImage {
+	height: 100px;
+	max-width: 100%;
 }
 
-.TogglerIcon{
-  @include size(25px);
-  color: $c-white;
+.Toggler {
+	@include btn();
+	background-color: $c-main;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.TogglerIcon {
+	@include size(25px);
+	color: $c-white;
 }
 
 .Nav {
-  transform-origin: top left;
-  z-index: 10;
-  @include up(lg){
-    position: static;
-    text-align: right;
-  }
+	transform-origin: top left;
+	z-index: 10;
+}
+.Nav_screen_lg {
+	position: static;
+	text-align: right;
 }
 
-.Link{
- @include btn();
-  display: block;
-  background-color: $c-black;
-  color: $c-white;
-  padding: 8px 30px;
-  transition: color 0.4s;
-  cursor: pointer;
-  text-transform: uppercase;
-  font-family: $ff-gamma;
-  font-size: 14px;
-  letter-spacing: 1px;
-  @include hover-focus() {
-    color: $c-main;
-  }
-  @include up(lg){
-    display: inline-block;
-    background-color: $c-white;
-    color: $c-gray-9;
-    padding: 30px 15px;
-  }
+.Link {
+	@include btn();
+	display: block;
+	background-color: $c-black;
+	color: $c-white;
+	padding: 8px 30px;
+	transition: color 0.4s;
+	cursor: pointer;
+	text-transform: uppercase;
+	font-family: $ff-gamma;
+	font-size: 14px;
+	letter-spacing: 1px;
+	@include hover-focus() {
+		color: $c-main;
+	}
+	@include up(lg) {
+		display: inline-block;
+		background-color: $c-white;
+		color: $c-gray-9;
+		padding: 30px 15px;
+	}
 }
-

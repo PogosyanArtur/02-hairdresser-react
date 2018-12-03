@@ -10,19 +10,21 @@ import Icon from '../../icon/icon';
 
 class Topline extends Component {
 	state = {
-		showContacts: 0
+		contactsHeight: 0
 	};
 
 	toggleHandler = () => {
-		this.setState(prevState => ({ showContacts: prevState.showContacts === 0 ? 'auto' : 0 }));
+		this.setState(prevState => ({
+			contactsHeight: prevState.contactsHeight === 0 ? 'auto' : 0
+		}));
 	};
 
 	render() {
 		return (
 			<section className={classes.Block}>
 				<div className={classes.Container}>
-					<MediaQuery query="(max-width: 991px)">
-						<AnimateHeight duration={500} height={this.state.showContacts}>
+					<MediaQuery maxWidth={991}>
+						<AnimateHeight duration={500} height={this.state.contactsHeight}>
 							<div id="TopLineContacts">
 								<ContactsInfo
 									contactsInfoClassName={classes.ContactsBlock}
@@ -35,11 +37,10 @@ class Topline extends Component {
 							</div>
 						</AnimateHeight>
 						<div className={classes.Arrow} onClick={this.toggleHandler}>
-							{console.log(this.state.showContacts)}
 							<Icon name="arrow" size="10" />
 						</div>
 					</MediaQuery>
-					<MediaQuery query="(min-width: 992px)">
+					<MediaQuery minWidth={992}>
 						<div id="TopLineContacts" className={classes.Contacts}>
 							<ContactsInfo
 								contactsInfoClassName={[
