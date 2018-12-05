@@ -28,6 +28,7 @@ class Topline extends Component {
 							<div id="TopLineContacts">
 								<ContactsInfo
 									contactsInfoClassName={classes.ContactsBlock}
+									withIcon
 									names={['time', 'mail', 'tel']}
 								/>
 								<SocialsInfo
@@ -47,6 +48,7 @@ class Topline extends Component {
 									classes.ContactsBlock,
 									classes.ContactsBlock_screen_lg
 								].join(' ')}
+								withIcon
 								names={['time', 'mail', 'tel']}
 							/>
 							<SocialsInfo

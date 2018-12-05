@@ -1,0 +1,13 @@
+@import '../../../assets/styles/index.scss';
+
+.Box {
+	background-color: $c-white;
+	border-radius: 10px;
+	padding: 20px 30px 40px 30px;
+	@include up(lg) {
+		width: 300px;
+	}
+}
+.Title {
+	text-align: center;
+}

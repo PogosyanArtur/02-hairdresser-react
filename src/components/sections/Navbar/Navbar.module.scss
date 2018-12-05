@@ -64,6 +64,8 @@
 	font-family: $ff-gamma;
 	font-size: 14px;
 	letter-spacing: 1px;
+	border-bottom-color: transparent;
+	outline-color: transparent;
 	@include hover-focus() {
 		color: $c-main;
 	}
