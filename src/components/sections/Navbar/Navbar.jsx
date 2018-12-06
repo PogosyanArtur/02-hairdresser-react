@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import AnimateHeight from 'react-animate-height';
 import MediaQuery from 'react-responsive';
 
+import NavigationItems from '../../ui/NavigationItems/NavigationItems';
 import styles from './Navbar.module.scss';
 import logoImage from '../../../assets/images/logo-383x354.png';
 import Icon from '../../icon/icon';
@@ -18,20 +19,6 @@ class NavBar extends Component {
 	};
 
 	render() {
-		let navbarLists = [
-			{ name: 'главная', link: '#' },
-			{ name: 'услуги', link: '#service' },
-			{ name: 'цены', link: '#price' },
-			{ name: 'акции', link: '#' },
-			{ name: 'контакты', link: '#' }
-		];
-
-		let lists = navbarLists.map((item, index) => (
-			<a className={styles.Link} key={index} href={item.link}>
-				{item.name}
-			</a>
-		));
-
 		return (
 			<React.Fragment>
 				<MediaQuery maxWidth={991}>
@@ -40,6 +27,7 @@ class NavBar extends Component {
 							<a className={styles.Brand} href="#s">
 								<img className={styles.BrandImage} src={logoImage} alt="logo" />
 							</a>
+
 							<button
 								className={styles.Toggler}
 								type="button"
@@ -48,8 +36,9 @@ class NavBar extends Component {
 								<Icon name="menu" color="#fff" />
 							</button>
 						</div>
+
 						<AnimateHeight duration={500} height={this.state.listsHeight}>
-							<div className={styles.Nav}>{lists}</div>
+							<NavigationItems />
 						</AnimateHeight>
 					</section>
 				</MediaQuery>
@@ -60,7 +49,7 @@ class NavBar extends Component {
 								<img className={styles.BrandImage} src={logoImage} alt="logo" />
 							</a>
 						</div>
-						<div className={[styles.Nav, styles.Nav_screen_lg].join(' ')}>{lists}</div>
+						<NavigationItems screen="lg" />
 					</section>
 				</MediaQuery>
 			</React.Fragment>

@@ -1,0 +1,66 @@
+@import '../../../assets/styles/index.scss';
+
+.Nav {
+	z-index: 10;
+}
+.Nav_screen_lg {
+	position: static;
+	text-align: right;
+}
+
+.Link {
+	// common
+	@include btn();
+	cursor: pointer;
+
+	// orientation
+	display: block;
+	@include up(lg) {
+		display: inline-block;
+	}
+
+	// size
+	padding: 8px 30px;
+	font-size: 14px;
+	@include up(lg) {
+		padding: 30px 15px;
+	}
+
+	// effect
+	transition: color 0.4s;
+
+	// view
+	font-family: $ff-gamma;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	background-color: $c-black;
+	color: $c-white;
+	&:hover,
+	&:focus {
+		color: $c-main;
+	}
+	@include up(lg) {
+		background-color: $c-white;
+		color: $c-gray-9;
+	}
+}
+
+.Nav_view_darkish .Link {
+	background-color: $c-black;
+	color: $c-white;
+	&:hover,
+	&:focus {
+		color: $c-main;
+	}
+	@include up(lg) {
+		background-color: $c-black;
+		color: $c-white;
+	}
+}
+
+.Nav_orientation_vertical .Link {
+	@include up(lg) {
+		display: block;
+		padding: 10px 15px;
+	}
+}

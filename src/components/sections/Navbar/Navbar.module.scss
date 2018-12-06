@@ -42,37 +42,3 @@
 	@include size(25px);
 	color: $c-white;
 }
-
-.Nav {
-	transform-origin: top left;
-	z-index: 10;
-}
-.Nav_screen_lg {
-	position: static;
-	text-align: right;
-}
-
-.Link {
-	@include btn();
-	display: block;
-	background-color: $c-black;
-	color: $c-white;
-	padding: 8px 30px;
-	transition: color 0.4s;
-	cursor: pointer;
-	text-transform: uppercase;
-	font-family: $ff-gamma;
-	font-size: 14px;
-	letter-spacing: 1px;
-	border-bottom-color: transparent;
-	outline-color: transparent;
-	@include hover-focus() {
-		color: $c-main;
-	}
-	@include up(lg) {
-		display: inline-block;
-		background-color: $c-white;
-		color: $c-gray-9;
-		padding: 30px 15px;
-	}
-}
