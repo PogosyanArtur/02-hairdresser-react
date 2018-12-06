@@ -6,7 +6,8 @@ const Footer = () => {
 	return (
 		<div className={classes.Box}>
 			<div className={classes.Navigation}>
-				<NavigationItems orientation="vertical" view="darkish" />
+				<h4>навигация</h4>
+				<NavigationItems orientation="vertical" view="darkish" size="small" />
 			</div>
 			<div className={classes.Contacts} />
 			<div className={classes.Timetable} />

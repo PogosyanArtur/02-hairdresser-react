@@ -14,7 +14,8 @@ const NavigationItems = props => {
 		classes.Nav,
 		props.screen ? classes[`Nav_screen_${props.screen}`] : null,
 		props.orientation ? classes[`Nav_orientation_${props.orientation}`] : null,
-		props.view ? classes[`Nav_view_${props.view}`] : null
+		props.view ? classes[`Nav_view_${props.view}`] : null,
+		props.size ? classes[`Nav_size_${props.view}`] : null
 	];
 
 	return (

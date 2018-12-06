@@ -46,21 +46,25 @@
 }
 
 .Nav_view_darkish .Link {
+	text-transform: capitalize;
 	background-color: $c-black;
-	color: $c-white;
+	color: $c-gray-3;
 	&:hover,
 	&:focus {
 		color: $c-main;
 	}
 	@include up(lg) {
 		background-color: $c-black;
-		color: $c-white;
+		color: $c-gray-3;
 	}
+}
+.Nav_size_small .Link {
+	font-size: 12px;
 }
 
 .Nav_orientation_vertical .Link {
 	@include up(lg) {
-		display: block;
+		text-align: left;
 		padding: 10px 15px;
 	}
 }
