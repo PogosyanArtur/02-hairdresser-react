@@ -1,0 +1,21 @@
+@import '../../styles/index.scss';
+
+.Link {
+	color: $c-black;
+	padding: 10px 7px;
+	transition: all 0.3s;
+}
+
+.Link:hover,
+.Link:focus {
+	color: $c-white;
+}
+
+.Link.Link_view_light {
+	color: $c-white;
+}
+
+.Link.Link_view_light:hover,
+.Link.Link_view_light:focus {
+	color: $c-main-9;
+}

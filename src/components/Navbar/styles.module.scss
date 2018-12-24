@@ -1,0 +1,44 @@
+@import '../../styles/index.scss';
+
+.Box {
+	background-color: $c-white;
+	position: relative;
+}
+.Box_screen_lg {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	@include container();
+}
+.Container {
+	@include container();
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.Container_screen_lg {
+	max-width: 100%;
+	width: auto;
+	padding: 0;
+	margin: 0;
+}
+.Brand {
+	display: inline-block;
+}
+
+.BrandImage {
+	height: 100px;
+	max-width: 100%;
+}
+
+.Toggler {
+	@include btn();
+	background-color: $c-main;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.TogglerIcon {
+	@include size(25px);
+	color: $c-white;
+}

@@ -1,0 +1,10 @@
+@import '../../styles/index.scss';
+.CreditCards{
+  text-align: center;
+  margin-bottom: 15px;
+}
+.CreditCard{
+  display: inline-block;
+  @include px(10px);
+
+}

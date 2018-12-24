@@ -1,15 +1,15 @@
 import React from 'react';
-import TopLine from '../components/sections/TopLine/TopLine';
-import Navbar from '../components/sections/Navbar/Navbar';
-import Service from '../components/sections/Service/Service';
-import Title from '../components/sections/Title/Title';
-import Poster from '../components/sections/Poster/Poster';
-import Brands from '../components/sections/Brands/Brands';
-import Prices from '../components/sections/Prices/Prices';
-import CreditCards from '../components/sections/CreditCards/CreditCards';
-import Stocks from '../components/sections/Stocks/Stocks';
-import Map from '../components/sections/Map/Map';
-import Footer from '../components/sections/Footer/Footer';
+import TopLine from '../components/TopLine';
+import Navbar from '../components/Navbar';
+import Service from '../components/Service';
+import Title from '../components/Title';
+import Poster from '../components/Poster';
+import Brands from '../components/Brands';
+import Prices from '../components/Prices';
+import CreditCards from '../components/CreditCards';
+import Stocks from '../components/Stocks';
+import Map from '../components/Map';
+import Footer from '../components/Footer';
 
 const Home = () => (
 	<>

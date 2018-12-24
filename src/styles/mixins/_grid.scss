@@ -1,0 +1,68 @@
+@mixin container($fluid:null){
+	@if $fluid == fluid {
+		width: 100%;
+		padding-right: ($grid-gutter-width / 2 );
+		padding-left: ($grid-gutter-width / 2 );
+		margin-right: auto;
+		margin-left: auto;
+		box-sizing: border-box;
+	}
+	@else {
+		width: 100%;
+		padding-right: ($grid-gutter-width / 2);
+		padding-left: ($grid-gutter-width / 2);
+		margin-right: auto;
+		margin-left: auto;
+		box-sizing: border-box;
+
+		@each $key, $value in $container-max-widths {
+			@media (min-width: #{map-get($grid-breakpoints, $key)}){
+				max-width: $value;
+			}			
+		}
+	}
+}
+
+@mixin row(){
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: -($grid-gutter-width / 2 );
+	margin-left: -($grid-gutter-width / 2 );
+	box-sizing: border-box;
+}
+
+@mixin col($column : null, $columns : 12){
+	@if $column == null {
+		flex-basis: 0;
+		flex-grow: 1;
+		max-width: 100%;
+		position: relative;
+		width: 100%;
+		min-height: 1px;
+		padding-right: ($grid-gutter-width / 2);
+		padding-left: ($grid-gutter-width / 2 );
+		box-sizing: border-box;
+	}
+	@if $column  > 0 {
+		flex: 0 0 round(( $column  / $columns * 100% ));
+		max-width: round(( $column  / $columns * 100% ));
+		position: relative;
+		width: 100%;
+		min-height: 1px;
+		padding-right: ($grid-gutter-width / 2);
+		padding-left: ($grid-gutter-width / 2 );
+		box-sizing: border-box;
+	}
+
+	@if $column == auto {
+		flex: 0 0 auto;
+		width: auto;
+		max-width: none;
+		position: relative;
+		width: 100%;
+		min-height: 1px;
+		padding-right: ($grid-gutter-width / 2);
+		padding-left: ($grid-gutter-width / 2 );
+		box-sizing: border-box;
+	}
+}
