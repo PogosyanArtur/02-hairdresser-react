@@ -6,7 +6,7 @@ const NavigationItems = props => {
 		{ name: 'главная', link: '#' },
 		{ name: 'услуги', link: '#service' },
 		{ name: 'цены', link: '#price' },
-		{ name: 'акции', link: '#' },
+		{ name: 'галерея', link: '#' },
 		{ name: 'контакты', link: '#' }
 	];
 

@@ -19,3 +19,8 @@ a.Item:hover,
 a.Item:focus {
 	color: $c-main-9;
 }
+
+a.Item.Item_view_lighten:hover,
+a.Item.Item_view_lighten:focus {
+	color: $c-main;
+}

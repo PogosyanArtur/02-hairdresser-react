@@ -1,5 +1,9 @@
+@import '../../styles/index.scss';
+
 .Box {
 	position: relative;
+	height: 600px;
+	background-color: $c-gray-3;
 }
 .Contacts {
 	position: absolute;

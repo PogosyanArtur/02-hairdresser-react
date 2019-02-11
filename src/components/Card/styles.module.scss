@@ -3,14 +3,16 @@
 
 .Box{
 	max-width: 590px;
-	cursor: pointer;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .Box:hover .Image{
     transform: scale(1.2);
 }
 .Box:hover .Button{
-    font-weight: bold;
-    color: $c-main-8;
+    color: $c-white;
 }
 .ImageBox{
     overflow: hidden;
@@ -46,5 +48,8 @@
 .Button {
     @include btn();
     transition: color 0.5s, font-weight 0.5s;
-    color: $c-main;
+    background-color: $c-main;
+    color: $c-white;
+    padding: 10px 30px;
+    border-radius: 5px;
 }

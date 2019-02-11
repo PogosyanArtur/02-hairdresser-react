@@ -21,4 +21,17 @@
 	max-width: 100%;
 }
 .ImageBox {
+	margin: 0 15px;
+	width:340px;
+	height:225px;
+	position: relative;
+}
+.ImageCover{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba($c-black, 0.3)
+
 }

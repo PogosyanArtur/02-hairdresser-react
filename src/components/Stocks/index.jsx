@@ -60,12 +60,13 @@ export default class stocks extends Component {
 			return (
 				<React.Fragment key={index}>
 					<div style={slideBox}>
-						<div style={{ padding: '0 15px' }}>
+						<div className={style.ImageBox}>
 							<img
 								className={style.SlideImage}
 								src={require(`../../assets/images/${img}.jpg`)}
 								alt="Картинки акции"
 							/>
+							<div className={style.ImageCover}></div>
 						</div>
 					</div>
 				</React.Fragment>
@@ -74,7 +75,7 @@ export default class stocks extends Component {
 		return (
 			<div className={style.Box}>
 				<div className={style.Container}>
-					<h2 className={style.Title}>Наши аккции</h2>
+					<h2 className={style.Title}>Галерея</h2>
 					<Slider {...settings}>{slides}</Slider>
 				</div>
 			</div>

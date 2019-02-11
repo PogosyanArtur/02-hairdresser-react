@@ -26,13 +26,6 @@ const Home = () => (
 		<Stocks />
 		<Map />
 		<Footer />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
 	</>
 );
 export default Home;

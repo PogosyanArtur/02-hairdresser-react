@@ -1,52 +1,10 @@
 import React from 'react';
 import Icon from '../Icon';
 import classes from './styles.module.scss';
-
-const contactsInfoLists = [
-	{
-		name: 'time',
-		iconName: 'clock',
-		IconSize: 20,
-		href: null,
-		context: 'ПН-ВС 10:00 - 21:00',
-		lable: null
-	},
-	{
-		name: 'mail',
-		iconName: 'mail',
-		IconSize: 20,
-		href: 'mailto:iris9009797@yandex.ru',
-		context: 'iris9009797@yandex.ru',
-		lable: 'E-mail: '
-	},
-	{
-		name: 'tel',
-		iconName: 'call',
-		IconSize: 20,
-		href: 'tel:+74999009797',
-		context: '+7(499) 900-97-97',
-		lable: 'Тел. '
-	},
-	{
-		name: 'address',
-		iconName: null,
-		IconSize: 20,
-		href: null,
-		context: 'Город Москва, улица Керамический проезд дом 53 корп.1',
-		lable: 'Адрес: '
-	},
-	{
-		name: 'site',
-		iconName: null,
-		IconSize: 20,
-		href: 'http://irisstyle.ru',
-		context: 'irisstyle.ru',
-		lable: 'Сайт: '
-	}
-];
+import contactsInfoLists from '../../data/contacts'
 
 const ContactsInfo = props => {
-	const styles = [classes.Item, props.view === 'light' ? classes.Item_view_light : null];
+	const styles = [classes.Item, props.view === 'light' ? classes.Item_view_light : null, props.view === 'lighten' ? classes.Item_view_lighten : null];
 	return (
 		<div className={props.contactsInfoClassName}>
 			{props.names.map(name => {
