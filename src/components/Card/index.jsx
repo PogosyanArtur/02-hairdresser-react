@@ -4,7 +4,7 @@ import style from './styles.module.scss';
 
 export default params => {
 	return (
-		<div className={classnames(style.Box, params.cardClassName)}>
+		<div onClick={params.onClick} className={classnames(style.Box, params.cardClassName)}>
 			<div className={style.ImageBox}>
 				<img className={style.Image} src={params.src} alt={params.alt} />
 			</div>

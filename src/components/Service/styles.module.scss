@@ -4,18 +4,89 @@
     @include container();
 }
 
-.Content{
-    @include  row();
+.Content {
+    @include row();
     justify-content: center;
 }
-.Item{
+
+.Item {
     @include col(12);
     @include py(40px);
-    @include up(md){
+
+    @include up(md) {
         @include col(6);
     }
-    @include up(lg){
+
+    @include up(lg) {
         @include col(4);
     }
 
+}
+
+.Modal {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    background-color: rgba($c-black, 0.7);
+    width: 100vw;
+    height: 100vh;
+    z-index: 3000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ModalContainer {
+    background-color: $c-white;
+    border-radius: 10px;
+    position: relative;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 3002;
+    transform: translate(-50%, -50%);
+
+    @include down(lg) {
+        border-radius: 0px;
+        width: 100vw;
+        height: 100vh;
+    }
+}
+
+.ModalContentBox {
+    overflow-Y: scroll;
+    width: 60vw;
+    height: 75vh;
+    margin: 30px 0;
+    @include down(lg) {
+        width: 100vw;
+        height: 100vh;
+    }
+
+}
+
+.ModalContent {
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+.XContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 15px 10px 0px;
+}
+
+.X {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    border: 2px solid $c-gray-3;
+    line-height: 1;
+    font-size: 12px;
+    cursor: pointer;
+    margin: 10px 10px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

@@ -1,0 +1,33 @@
+@import '../../styles/index.scss';
+
+
+.Context__Header {
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.Context__Paragraph {
+    color: #929292;
+    line-height: 1.7;
+    font-size: 16px;
+}
+.Context__Title {
+    color: #141414;
+    font-size: 20px;
+    font-family: 'Open Sans','Arial','Helvetica','sans-serif';
+    line-height: 1.5;
+    padding: 10px 0;
+}
+
+.Context__List {
+    list-style-position: inside;
+    padding-left: 20px;
+}
+.Context__ListItem {
+    color: #929292;
+    font-size: 16px;
+    font-family: 'Open Sans','Arial','Helvetica','sans-serif';
+    line-height: 1.5;
+    padding: 10px 0;
+}
