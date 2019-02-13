@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import style from './styles.module.scss';
 import lists from './PriceData';
 
+
 export default class Prices extends Component {
 	state = {
 		filterdList: 'makeUp'
@@ -45,10 +46,11 @@ export default class Prices extends Component {
 			);
 		});
 		return (
-			<section className={style.Box}>
-				<div className={style.Pills}>{pills}</div>
-				<div className={style.Content}>{listItems}</div>
-			</section>
+
+				<section className={style.Box} >
+					<div className={style.Pills}>{pills}</div>
+					<div className={style.Content}>{listItems}</div>
+				</section>
 		);
 	}
 }

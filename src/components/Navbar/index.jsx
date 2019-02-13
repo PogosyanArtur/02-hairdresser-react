@@ -24,7 +24,7 @@ class NavBar extends Component {
 				<MediaQuery maxWidth={991}>
 					<section className={styles.Box}>
 						<div className={styles.Container}>
-							<a className={styles.Brand} href="#s">
+							<a className={styles.Brand} href="http://irisstyle.ru/">
 								<img className={styles.BrandImage} src={logoImage} alt="logo" />
 							</a>
 

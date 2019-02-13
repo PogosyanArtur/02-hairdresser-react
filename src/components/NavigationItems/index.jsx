@@ -1,13 +1,14 @@
 import React from 'react';
+import { Link } from 'react-scroll'
 import classes from './styles.module.scss';
 
 const NavigationItems = props => {
 	let navbarLists = [
-		{ name: 'главная', link: '#' },
-		{ name: 'услуги', link: '#service' },
-		{ name: 'цены', link: '#price' },
-		{ name: 'галерея', link: '#' },
-		{ name: 'контакты', link: '#' }
+		{ name: 'главная', link: 'home' },
+		{ name: 'услуги', link: 'service' },
+		{ name: 'цены', link: 'price' },
+		{ name: 'галерея', link: 'gallary' },
+		{ name: 'контакты', link: 'contacts' }
 	];
 
 	const styles = [
@@ -21,9 +22,17 @@ const NavigationItems = props => {
 	return (
 		<div className={styles.join(' ')}>
 			{navbarLists.map((item, index) => (
-				<a className={classes.Link} key={index} href={item.link}>
+				<Link 
+				className={classes.Link} 
+				key={index}
+				to={item.link} 
+				spy={true} 
+				smooth={true} 
+				duration={1000}
+				offset={-90}
+				ignoreCancelEvents={false}>	
 					{item.name}
-				</a>
+				</Link>
 			))}
 		</div>
 	);

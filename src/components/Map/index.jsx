@@ -12,22 +12,22 @@ const mapState = {
 const Maps = () => (
 	<React.Fragment>
 		<MediaQuery query={'(min-width: 0px) and (max-width:991px)'}>
-			<section>
-				<Contacts />
-			</section>
+				<section>
+					<Contacts />
+				</section>
 		</MediaQuery>
 		<MediaQuery query={'(min-width: 992px)'}>
-			<section className={classes.Box}>
-				<YMaps>
-					<Map width="100%" height="600px" defaultState={mapState}>
-						<Placemark
-							geometry={[55.876423, 37.56689]}
-							options={{ preset: 'islands#icon', iconColor: '#900' }}
-						/>
-					</Map>
-				</YMaps>
-				<Contacts contactsClassName={classes.Contacts} />
-			</section>
+				<section className={classes.Box}>
+					<YMaps>
+						<Map width="100%" height="600px" defaultState={mapState}>
+							<Placemark
+								geometry={[55.876423, 37.56689]}
+								options={{ preset: 'islands#icon', iconColor: '#900' }}
+							/>
+						</Map>
+					</YMaps>
+					<Contacts contactsClassName={classes.Contacts} />
+				</section>
 		</MediaQuery>
 	</React.Fragment>
 );

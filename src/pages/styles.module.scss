@@ -1,0 +1,15 @@
+@import '../styles/index.scss';
+
+.Btn{
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    @include btn();
+    border: 2px solid $c-main;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.BtnIcon{
+    color:$c-main
+}

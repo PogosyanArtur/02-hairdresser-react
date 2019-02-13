@@ -73,12 +73,12 @@ export default class stocks extends Component {
 			);
 		});
 		return (
-			<div className={style.Box}>
-				<div className={style.Container}>
-					<h2 className={style.Title}>Галерея</h2>
-					<Slider {...settings}>{slides}</Slider>
-				</div>
-			</div>
+				<section className={style.Box}>
+					<div className={style.Container}>
+						<h2 className={style.Title}>Галерея</h2>
+						<Slider {...settings}>{slides}</Slider>
+					</div>
+				</section>
 		);
 	}
 }
